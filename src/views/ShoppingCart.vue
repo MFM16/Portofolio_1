@@ -199,7 +199,7 @@ export default {
       };
 
       axios
-        .post("https://portomfm.000webhostapp.com/api/checkout", checkoutData)
+        .post("http://portomfm.000webhostapp.com/api/checkout", checkoutData)
         .then(this.$router.push("success"))
         .catch((err) => console.log(err));
     },
