@@ -69,6 +69,10 @@ export default {
 
       window.location.reload();
     },
+
+    printProduct() {
+      console.log(this.products);
+    },
   },
   mounted() {
     if (localStorage.getItem("keranjangUser")) {
@@ -81,7 +85,7 @@ export default {
 
     axios
       .get("https://portomfm.000webhostapp.com/api/product")
-      .then((response) => (this.products = response.data.data.data.data))
+      .then((response) => (this.products = response.data.data.data))
       .catch((err) => console.log(err));
   },
 };
