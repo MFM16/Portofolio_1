@@ -80,7 +80,7 @@ export default {
     }
 
     axios
-      .get("http://127.0.0.1:8001/api/product")
+      .get("https://portomfm.000webhostapp.com/api/product")
       .then((response) => (this.products = response.data.data.data))
       .catch((err) => console.log(err));
   },
