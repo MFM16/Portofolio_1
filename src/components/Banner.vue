@@ -69,10 +69,6 @@ export default {
 
       window.location.reload();
     },
-
-    printProduct() {
-      console.log(this.products);
-    },
   },
   mounted() {
     if (localStorage.getItem("keranjangUser")) {
