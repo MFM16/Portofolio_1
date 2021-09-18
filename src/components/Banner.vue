@@ -80,11 +80,7 @@ export default {
     }
 
     axios
-<<<<<<< HEAD
       .get("https://portomfm.000webhostapp.com/api/product")
-=======
-      .get("https://portomfm.000webhostapp.com//api/product")
->>>>>>> 2baf729f898f5631ec9b3b3e13142fff00996f2f
       .then((response) => (this.products = response.data.data.data))
       .catch((err) => console.log(err));
   },
