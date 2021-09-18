@@ -144,7 +144,7 @@ export default {
           id: this.$route.params.id,
         },
       })
-      .then((response) => this.setDataPicture(response.data))
+      .then((response) => this.setDataPicture(response.data.data))
       .catch((err) => console.log(err));
   },
 };
