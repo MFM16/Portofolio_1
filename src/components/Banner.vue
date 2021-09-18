@@ -81,7 +81,7 @@ export default {
 
     axios
       .get("https://portomfm.000webhostapp.com/api/product")
-      .then((response) => (this.products = response.data.data.data))
+      .then((response) => (this.products = response.data.data))
       .catch((err) => console.log(err));
   },
 };
