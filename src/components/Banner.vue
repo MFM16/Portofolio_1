@@ -32,9 +32,6 @@
                 </div>
                 <div class="col-lg-12" v-else>
                     <p> Produk Terbaru Belum Tersedia</p>
-                    <li @click="cetak()" class="w-icon active">
-                      <a href="#"><i class="icon_bag_alt"></i></a>
-                    </li>
                 </div>
             </div>
         </div>
@@ -72,10 +69,6 @@ export default {
 
       window.location.reload();
     },
-
-    cetak() {
-      console.log(this.products);
-    },
   },
   mounted() {
     if (localStorage.getItem("keranjangUser")) {
@@ -88,7 +81,7 @@ export default {
 
     axios
       .get("https://portomfm.000webhostapp.com/api/product")
-      .then((response) => (this.products = response.data.data.data))
+      .then((response) => console.log(response.data.data.data))
       .catch((err) => console.log(err));
   },
 };
