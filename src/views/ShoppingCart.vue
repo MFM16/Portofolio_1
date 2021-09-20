@@ -201,7 +201,7 @@ export default {
       axios
         .post("https://portomfm.000webhostapp.com/api/checkout", checkoutData)
         // .then(() => this.$router.push("success"))
-        .then(console.log(email))
+        .then(console.log(this.email))
         .catch((err) => console.log(this.email, err));
     },
   },
