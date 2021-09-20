@@ -193,16 +193,15 @@ export default {
         email: this.infoPembeli.email,
         number: this.infoPembeli.number,
         address: this.infoPembeli.address,
-        transaction_total: this.totalHarga,
+        transaction_total: this.totalBiaya,
         transaction_status: "PENDING",
         transaction_details: productIds,
       };
 
       axios
         .post("https://portomfm.000webhostapp.com/api/checkout", checkoutData)
-        // .then(() => this.$router.push("success"))
-        .then(console.log(this.email))
-        .catch((err) => console.log(this.email, err));
+        .then(() => this.$router.push("success"))
+        .catch((err) => console.log(err));
     },
   },
   mounted() {
