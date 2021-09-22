@@ -139,7 +139,7 @@ export default {
       }
     }
     axios
-      .get("https://portomfm.000webhostapp.com/api/product", {
+      .get("http://127.0.0.1:8000/api/product", {
         params: {
           id: this.$route.params.id,
         },
